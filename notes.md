@@ -35,6 +35,7 @@ e.g.: `playSong`, `setTimeout`, `setInterval`, animations, AJAX
 [name="value"]
 [name!="value"]
 [name*="value"]
+^ wildcard
 ```
 
 ---
