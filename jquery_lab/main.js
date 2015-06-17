@@ -153,26 +153,45 @@ $(document).on('ready', function() {
 
   // # EFFECTS
   // 1. Toggle the green container.
+  // $('#green-container').toggle();
+
   // 2. Toggle the green container again.
+  
   // 3. Fade the green container out.
+  
   // 4. Fade the green container in.
+  
   // 5. Slide the green container up.
+  
   // 6. Slide the green container down.  
+  
   // 1. When "Button 1" is clicked, toggle the green container.
+  
   // 2. When "Button 2" is clicked, fade the "Button Message" out
+  
   // 3. When "Button 3" is clicked, fade the "Button Message" back in.
+  
   // 4. When "Button 4" is clicked, slide the green container up.
 
   // # EVENTS
   // 1. When the 'b' key is pressed, toggle all (b)lue shapes.
+  
   // 2. When the 'r' key is pressed, toggle all (r)ed shapes.
+  
   // 3. When the 'k' key is pressed, toggle all blac(k) shapes.
+  
   // 4. When the 'g' key is pressed, toggle all (g)ray shapes.
+  
   // 5. When the spacebar key is pressed, append a small blue circle to the green container.
+  
   // 1. As you type in the text input, change the "Form Message" to be the same as what you type.
+  
   // 2. As you type in the text input, change the "Form Message" to be the REVERSE of what you type.
+  
   // 3. Make the "Form Message" show the number of characters remaining (14 characters maximum) as you type in the text input. (e.g. "3 characters remaining").
+  
   // 1. When the form is submitted, clear the text in the input field.
+  
   // 2. __Shape Destroyer:__ The user can enter a color into the input field. When they click "submit":
   //   - All shapes matching the given color should be removed.
   //   - If they enter an invalid color show them an alert message telling them this.
@@ -180,15 +199,22 @@ $(document).on('ready', function() {
 
   // # EVENT BUBBLING
   // 1. When a black square is clicked log "Black Square Clicked" to the console.
+  
   // 2. When the orange container is clicked log "Orange Container Clicked"
+  
   // 3. Click the black square in the orange container.
+  
   // 4. What happened? Why?  
+  
   // 1. Add `event.stopPropagation()` to the black square's click handler.
+  
   // 2. What happens when you click the black square now?
+  
   // 3. What happens when you click the orange container OUTSIDE the black square?
 
   // # DEFAULT ACTION
   // 1. When a link is clicked, log to the console "Link Clicked"
+  
   // 2. What happens when you click a link? Why?
   // - Add `event.preventDefault()` to your link click handler.
   // - What happens when you click a link now?  
