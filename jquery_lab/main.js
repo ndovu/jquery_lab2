@@ -1,4 +1,8 @@
 $(document).on('ready', function() {
+  // do_this is simply a marker so it is easy to see what exr needs to
+  // be done.
+  var do_this = undefined;
+
 
   // # ATTRIBUTE SELECTORS
   // 1. Select all the links with any "href" attribute
@@ -156,71 +160,156 @@ $(document).on('ready', function() {
   // $('#green-container').toggle();
 
   // 2. Toggle the green container again.
+  // $('#green-container').toggle();  
   
   // 3. Fade the green container out.
+  // $('#green-container').fadeOut();
   
   // 4. Fade the green container in.
-  
+  // $('#green-container').fadeIn();
+
   // 5. Slide the green container up.
+  // $('#green-container').slideUp();
   
   // 6. Slide the green container down.  
+  // $('#green-container').slideDown();
   
   // 1. When "Button 1" is clicked, toggle the green container.
+  // $('#button-1').on('click', function(){
+  //   $('#green-container').toggle();
+  // });
   
   // 2. When "Button 2" is clicked, fade the "Button Message" out
+  // $('#button-2').on('click', function(){
+  //   $('#button-message').fadeOut();
+  // });
   
   // 3. When "Button 3" is clicked, fade the "Button Message" back in.
-  
+  // $('#button-3').on('click', function(){
+  //   $('#button-message').fadeIn();
+  // });
+
   // 4. When "Button 4" is clicked, slide the green container up.
+  // $('#button-4').on('click', function() {
+  //   $('#green-container').slideUp();
+  // });
 
   // # EVENTS
   // 1. When the 'b' key is pressed, toggle all (b)lue shapes.
-  
   // 2. When the 'r' key is pressed, toggle all (r)ed shapes.
-  
   // 3. When the 'k' key is pressed, toggle all blac(k) shapes.
-  
   // 4. When the 'g' key is pressed, toggle all (g)ray shapes.
-  
   // 5. When the spacebar key is pressed, append a small blue circle to the green container.
+  // $(document).on('keypress', function() {
+  //   var charcode = event.which;
+  //   if (event.which == 32) {
+  //     event.preventDefault();
+  //   }
+  //   // console.log(charcode); // check the charcode of input
+  //   var key = String.fromCharCode(charcode);
+  //   var shape_circle_small_blue_html =  '<div class="small blue circle shape"></div>';
+  //   if (key == 'b') {
+  //     $('.shape.blue').toggle();  
+  //   } else if (key == 'r') {
+  //     $('.shape.red').toggle();  
+  //   } else if (key == 'k') {
+  //     $('.shape.black').toggle();  
+  //   } else if (key == ' ') {
+  //     $('#green-container').append(shape_circle_small_blue_html);
+  //   } else {
+  //     console.log('Key pressed: ' + key);
+  //   }
+  // });
   
   // 1. As you type in the text input, change the "Form Message" to be the same as what you type.
+  // $('#form-1 [type="text"]').on('keypress', function() {
+  //   $('#form-message').html($(this).val());
+  // });
+
+  // $('#form-1 [type="text"]').on('keyup', function() {
+  //   $('#form-message').html($(this).val());
+  // });
   
   // 2. As you type in the text input, change the "Form Message" to be the REVERSE of what you type.
-  
+  // explanation of this function here http://repl.it/tBA/3
+  // function reverse(string) {
+  //   return string.split("").reverse().join("");
+  // };
+
+  // $('#form-1 [type="text"]').on('keypress', function() {
+  //   var message = $(this).val();
+  //   $('#form-message').html(reverse(message));
+  // });
+
+  // $('#form-1 [type="text"]').on('keyup', function() {
+  //   var message = $(this).val();
+  //   $('#form-message').html(reverse(message));
+  // });
+
   // 3. Make the "Form Message" show the number of characters remaining (14 characters maximum) as you type in the text input. (e.g. "3 characters remaining").
+  do_this;
   
   // 1. When the form is submitted, clear the text in the input field.
-  
+  do_this;
+
   // 2. __Shape Destroyer:__ The user can enter a color into the input field. When they click "submit":
   //   - All shapes matching the given color should be removed.
   //   - If they enter an invalid color show them an alert message telling them this.
   //   - Clear the input field.
+  do_this;
 
   // # EVENT BUBBLING
   // 1. When a black square is clicked log "Black Square Clicked" to the console.
-  
+  // $('.black.square').click(function(){console.log('black square clicked'); });
+
   // 2. When the orange container is clicked log "Orange Container Clicked"
-  
+  // $('#orange-container').click(function(){console.log('orange container clicked');});  
+
   // 3. Click the black square in the orange container.
-  
+  // okay...
+
   // 4. What happened? Why?  
+  // both 'black square clicked' and 'orange container clicked' appear in the console log... cause you know, event bubbling.
   
   // 1. Add `event.stopPropagation()` to the black square's click handler.
-  
+  // $('.black.square').click(function(event){console.log('black square clicked'); event.stopPropagation();});
+
   // 2. What happens when you click the black square now?
-  
+  // only 'black square clicked' is logged in the console
+
   // 3. What happens when you click the orange container OUTSIDE the black square?
+  // only 'orange container clicked' is logged in the console
 
   // # DEFAULT ACTION
   // 1. When a link is clicked, log to the console "Link Clicked"
+  // $('a').click(function() {
+  //   console.log('link clicked');
+  // });
   
   // 2. What happens when you click a link? Why?
+  // the link is followed
+
   // - Add `event.preventDefault()` to your link click handler.
+  // $('a').click(function() {
+  //   var url = $(this).attr('href');
+  //   console.log(url);
+  //   event.preventDefault();
+  // });
+
   // - What happens when you click a link now?  
+  // the link is not followed and the click is logged.
 
   // # DELEGATED EVENTS
   // 1. Set a delegated click handler on the orange container so that red shapes are removed when you click them.
+  // $('#orange-container').click(function() {
+  //   $('.shape.red').remove();
+  // });
+
+  // let button 4 create red shapes so that we can destroy them and 
+  // make sure the delegated event works as expected.
+  // $('#button-4').click(function() {
+  //   $('#orange-container').append('<div class="medium red diamond shape"></div>');
+  // });
 
   // # RESOURCES
   // - http://api.jquery.com/
