@@ -2,7 +2,7 @@
 // Don't change them unless you know what you're doing!
 
 $(document).ready(function() {
-
+  
   $('#reset').click(function() {
     document.location.reload();
   });

@@ -247,16 +247,36 @@ $(document).on('ready', function() {
   // });
 
   // 3. Make the "Form Message" show the number of characters remaining (14 characters maximum) as you type in the text input. (e.g. "3 characters remaining").
-  do_this;
+  // set form message initial condition
+  // $('#form-message').html('14 characters remaining.');
+
+  // $('#form-1 [type="text"]').on('keypress', function() {
+  //   var message = $(this).val();
+  //   $('#form-message').html((14 - message.length) + ' characters remaining.');
+  // });
+
+  // $('#form-1 [type="text"]').on('keyup', function() {
+  //   var message = $(this).val();
+  //   $('#form-message').html((14 - message.length) + ' characters remaining.');
+  // });
   
   // 1. When the form is submitted, clear the text in the input field.
-  do_this;
+  // $('#form-1 [type="submit"]').click(function(event) {
+  //   event.preventDefault();
+  //   $('#form-message').html('14 characters remaining');
+  //   $('#form-1 [type="text"]').val('');
+  // });
 
   // 2. __Shape Destroyer:__ The user can enter a color into the input field. When they click "submit":
   //   - All shapes matching the given color should be removed.
   //   - If they enter an invalid color show them an alert message telling them this.
   //   - Clear the input field.
-  do_this;
+  // $('#form-1').on('submit', function() {
+  //   var color = $('input[type="text"]').val();
+  //   $('input[type="text"]').val('')
+  //   $('input[type="text"]').focus()
+  //   $('.shape.' + color).remove();
+  // });
 
   // # EVENT BUBBLING
   // 1. When a black square is clicked log "Black Square Clicked" to the console.
